@@ -88,29 +88,29 @@ Ein Interrupt beschreibt die kurzfristige Unterbrechung der normalen Programmaus
 
 ```text @plantUML.png
 @startuml
-ditaa
+ditaa       
                            Hauptprogramm              Interrupt-Routine
 
-                         +---------------+
-                         : ...           |
-                         +---------------+
-                         : Instruktion 1 |      +-------------+
-                         +---------------+      |             | 
-Interrupt tritt auf--->  : Instruktion 2 |      |             v
-                         +-------+-------+      |     +---------------+
-                                 |              |     : Instruktion A |
-                                 +--------------+     +---------------+
+                         +---------------+        
+                         : ...           |              
+                         +---------------+                                                                   
+                         : Instruktion 1 |      +-------------+                                         
+                         +---------------+      |             |                        
+Interrupt  tritt auf ->  : Instruktion 2 |      |             v                                       
+                         +---------------+      |     +---------------+                                      
+                                 |              |     : Instruktion A |                             
+                                 +--------------+     +---------------+                   
                                                       : Instruktion B |
                                  +--------------+     +---------------+
                                  |              |     : Instruktion C |
-                                 v              |     +-------+-------+
-                         +---------------+      |             |
+                         +---------------+      |     +---------------+
                          : Instruktion 3 |      |             |
                          +---------------+      +-------------+
                          : Instruktion 4 |
                          +---------------+
                          : ...           |
                          +---------------+
+
 @enduml
 ```
 
